@@ -26,17 +26,17 @@ var work = {
 			"employer": "Lowes Home Improvement",
 			"title": "Receiving Associate",
 			"location": "Mansfield, TX",
-			"date": "September 2014 - Current",
-			"description": "Stocking freight, unloading trucks, general labor",
+			"dates": "September 2014 - Current",
+			"description": "Stocking freight, unloading trucks, general labor and providing exceptional customer service!",
 			"url": "lowes.com"
 		},
 		
 		{
-			"employer": "telenetwork",
+			"employer": "Telenetwork",
 			"title": "Tech Support Rep",
 			"location": "Work from home",
-			"date": "Jan 6th 2014 - Sept 2014",
-			"description": "Providing customer service and tech support over the phone",
+			"dates": "Jan 6th 2014 - Sept 2014",
+			"description": "Provided customer service and tech support over the phone for a major internet service provider.",
 			"url": "telenetwork.com"
 		}
 	]
@@ -85,9 +85,17 @@ while (bio.skills.length > i) {
 for (job in work.jobs) {
 	$("#workExperience").append(HTMLworkStart);
 
-	var formattedEmployer = HTMLworkEmployer.replace("%data", work.jobs[job].employer);
+	var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
 	var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
 	var formattedEmployerTitle = formattedEmployer + formattedTitle;
-
 	$(".work-entry:last").append(formattedEmployerTitle);
+
+	var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
+	$(".work-entry:last").append(formattedDates);
+
+	var formattedDescription = HTMLworkDescription.replace("%data", work.jobs[job].description);
+	$(".work-entry:last").append(formattedDescription);
+
 }
+
+
