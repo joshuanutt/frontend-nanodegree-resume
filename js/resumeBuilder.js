@@ -100,3 +100,29 @@ function displayWork() {
 }
 
 displayWork();
+
+// Click Tracking //
+$(document).click(function(loc) {
+  // your code goes here
+  var x = loc.pageX;
+  var y = loc.pageY;
+
+  logClicks(x,y);
+});
+
+function inName(nameString) {
+	var splitName = nameString.split(" ");
+	console.log(splitName);
+	var firstName = splitName[0];
+	var lastName = splitName[1];
+
+	firstName = firstName.charAt(0).toUpperCase() + firstName.slice(1);
+	lastName = lastName.toUpperCase();
+
+	var newName = firstName + " " +lastName;
+	console.log(newName);
+	return newName;
+
+}
+$('#main').append(internationalizeButton);
+
