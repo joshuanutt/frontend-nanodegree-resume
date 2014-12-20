@@ -43,12 +43,14 @@ var work = {
 }
 
 var projects = {
-	"fromMock": {
-		"description": "Create webpage to sell product from mock",
-		"goals": ["Achieve less than 8% mismatch", "Write clean code!" ],
-		"status": "Completed"
-	}
-
+	"pJect": [
+		{
+			"title": "Project One",
+			"dates": "December 10th - 15th",
+			"description": "Create webpage to sell product from a mock pdf page.  I was required to acheive <8% mismatch between
+			 my page and the mock"
+		}
+	]
 }
 
 var education = {
@@ -80,7 +82,7 @@ while (bio.skills.length > i) {
 
 }
 
-
+/* Function to add work history */
 function displayWork() {	
 
 	for (job in work.jobs) {
@@ -101,6 +103,30 @@ function displayWork() {
 
 displayWork();
 
+/* Encapsulate display within projects object
+   Display project information */
+projects.display = function() {
+	for (project in projects.projects) {
+		$("#projects").append(HTMLprojectStart);
+
+		var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projeect[project].title);
+		$(".project-entry:last").append(formattedTitle);
+
+		var formattedDates = HTMLprojectDates.replace("%data%", projects.projeect[project].dates);
+		$(".project-entry:last").append(formattedTitle);
+
+		var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projeect[project].description);
+		$(".project-entry:last").append(formattedDescription);
+
+		if (projects.projects[project].images.length > 0) {
+			for (image in projects.project[project].images) {
+				var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
+				$(".project-entry:last").append(formattedImage);
+			}
+	    }
+	}
+}
+
 // Click Tracking //
 $(document).click(function(loc) {
   // your code goes here
@@ -110,6 +136,10 @@ $(document).click(function(loc) {
   logClicks(x,y);
 });
 
+
+
+/* Internationalize Feature
+   Capitalizes last name and first lettter of first name. */
 function inName(nameString) {
 	var splitName = nameString.split(" ");
 	console.log(splitName);
@@ -125,4 +155,6 @@ function inName(nameString) {
 
 }
 $('#main').append(internationalizeButton);
+/* */
+
 
