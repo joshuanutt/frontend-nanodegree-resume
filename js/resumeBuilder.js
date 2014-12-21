@@ -15,10 +15,17 @@ var bio = {
 		"twitter": "@me",
 		"location": "dallas"
 	},
-	"welcomeMessage": "Hey everybody!",
+	"welcomeMessage": "Hey everybody, thank you for checking out my site.  Hope you enjoy it as much as I enjoyed making it!",
 	"skills" : ["Awesomness", "Delivering Things", "Cryogenic Sleep", "Saving the Universe"],
 	"bioPic": "images/fry.jpg"
 }
+
+var welcomeMsg = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
+$("#header").append(welcomeMsg);
+
+var mainPic = HTMLbioPic.replace("%data%", bio.bioPic);
+$("#header").append(mainPic);
+
 
 var work = {
 	"jobs": [ 
@@ -43,12 +50,16 @@ var work = {
 }
 
 var projects = {
-	"pJect": [
+	"projects": [
 		{
 			"title": "Project One",
-			"dates": "December 10th - 15th",
-			"description": "Create webpage to sell product from a mock pdf page.  I was required to acheive <8% mismatch between
-			 my page and the mock"
+			"dates": "December 2014",
+			"description": "Create webpage to sell product from a mock pdf page.  I was required to acheive <8% mismatch"
+		},
+		{
+			"title": "Not a real Project",
+			"dates": "September 1942",
+			"description": "This is a filler entry"
 		}
 	]
 }
@@ -82,6 +93,7 @@ while (bio.skills.length > i) {
 
 }
 
+
 /* Function to add work history */
 function displayWork() {	
 
@@ -96,7 +108,7 @@ function displayWork() {
 		var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
 		$(".work-entry:last").append(formattedDates);
 
-		var formattedDescription = HTMLworkDescription.replace("%data", work.jobs[job].description);
+		var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
 		$(".work-entry:last").append(formattedDescription);
 	}
 }
@@ -109,23 +121,25 @@ projects.display = function() {
 	for (project in projects.projects) {
 		$("#projects").append(HTMLprojectStart);
 
-		var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projeect[project].title);
+		var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
 		$(".project-entry:last").append(formattedTitle);
 
-		var formattedDates = HTMLprojectDates.replace("%data%", projects.projeect[project].dates);
-		$(".project-entry:last").append(formattedTitle);
+		var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
+		$(".project-entry:last").append(formattedDates);
 
-		var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projeect[project].description);
+		var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
 		$(".project-entry:last").append(formattedDescription);
 
-		if (projects.projects[project].images.length > 0) {
+		/*if (projects.projects[project].images.length > 0) {
 			for (image in projects.project[project].images) {
 				var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
 				$(".project-entry:last").append(formattedImage);
-			}
-	    }
+		}
+	  }*/
 	}
 }
+
+projects.display();
 
 // Click Tracking //
 $(document).click(function(loc) {
