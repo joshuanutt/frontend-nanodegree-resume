@@ -170,5 +170,6 @@ function inName(nameString) {
 }
 $('#main').append(internationalizeButton);
 /* */
+$('#mapDiv').append(googleMap);
 
 
