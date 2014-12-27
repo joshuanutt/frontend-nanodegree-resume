@@ -54,12 +54,12 @@ var projects = {
 		{
 			"title": "Project One",
 			"dates": "December 2014",
-			"description": "Create webpage to sell product from a mock pdf page.  I was required to acheive <8% mismatch"
+			"description": "Create webpage to sell product from a mock pdf page.  I was required to acheive <8% mismatch",
 		},
 		{
 			"title": "Not a real Project",
 			"dates": "September 1942",
-			"description": "This is a filler entry"
+			"description": "This is a filler entry",
 		}
 	]
 }
@@ -95,7 +95,7 @@ while (bio.skills.length > i) {
 
 
 /* Function to add work history */
-function displayWork() {	
+/*function displayWork() {	
 
 	for (job in work.jobs) {
 		$("#workExperience").append(HTMLworkStart);
@@ -111,9 +111,26 @@ function displayWork() {
 		var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
 		$(".work-entry:last").append(formattedDescription);
 	}
+}*/
+
+work.display = function(){
+		for (job in work.jobs) {
+		$("#workExperience").append(HTMLworkStart);
+
+		var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+		var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+		var formattedEmployerTitle = formattedEmployer + formattedTitle;
+		$(".work-entry:last").append(formattedEmployerTitle);
+
+		var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
+		$(".work-entry:last").append(formattedDates);
+
+		var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+		$(".work-entry:last").append(formattedDescription);
+	}
 }
 
-displayWork();
+work.display();
 
 /* Encapsulate display within projects object
    Display project information */
@@ -130,12 +147,12 @@ projects.display = function() {
 		var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
 		$(".project-entry:last").append(formattedDescription);
 
-		/*if (projects.projects[project].images.length > 0) {
+		if (projects.projects[project].images.length > 0) {
 			for (image in projects.project[project].images) {
 				var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
 				$(".project-entry:last").append(formattedImage);
 		}
-	  }*/
+	  }
 	}
 }
 
