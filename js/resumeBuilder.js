@@ -15,7 +15,7 @@ var bio = {
 		"twitter": "@me",
 		"location": "dallas"
 	},
-	"welcomeMessage": "Hey everybody, thank you for checking out my site.  Hope you enjoy it as much as I enjoyed making it!",
+	"welcomeMessage": "Hello, my name is Josh and I love web development!",
 	"skills" : ["Awesomness", "Delivering Things", "Cryogenic Sleep", "Saving the Universe"],
 	"bioPic": "images/fry.jpg"
 }
@@ -54,32 +54,33 @@ var projects = {
 		{
 			"title": "Project One",
 			"dates": "December 2014",
-			"description": "Create webpage to sell product from a mock pdf page.  I was required to acheive <8% mismatch",
+			"description": "Create webpage to sell product from a mock pdf page.  I was required to acheive <8% mismatch"
 		},
 		{
 			"title": "Not a real Project",
-			"dates": "September 1942",
-			"description": "This is a filler entry",
+			"dates": "September 1900",
+			"description": "This is a filler entry"
 		}
 	]
 }
 
 var education = {
-	"school": [
-		{
-			"name": "Tarrant County College",
-			"location": "Arlington, TX",
-			"major": "Not Completed",
-			"date": "2012-2014",
-			"url": "tccd.edu"
-		},
+	"schools": [
 		{
 			"name": "Udacity",
 			"location": "Online",
 			"major": "Front-End Web Development",
-			"date": "2014-2015",
+			"dates": "2014-2015",
 			"url": "udacity.com"
+		},
+		{
+			"name": "Tarrant County College",
+			"location": "Arlington, TX",
+			"major": "Not Completed",
+			"dates": "2012-2014",
+			"url": "tccd.edu"
 		}
+
 	]
 }
 
@@ -94,27 +95,9 @@ while (bio.skills.length > i) {
 }
 
 
-/* Function to add work history */
-/*function displayWork() {	
+work.display = function() {	
 
 	for (job in work.jobs) {
-		$("#workExperience").append(HTMLworkStart);
-
-		var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
-		var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
-		var formattedEmployerTitle = formattedEmployer + formattedTitle;
-		$(".work-entry:last").append(formattedEmployerTitle);
-
-		var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
-		$(".work-entry:last").append(formattedDates);
-
-		var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
-		$(".work-entry:last").append(formattedDescription);
-	}
-}*/
-
-work.display = function(){
-		for (job in work.jobs) {
 		$("#workExperience").append(HTMLworkStart);
 
 		var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
@@ -132,8 +115,27 @@ work.display = function(){
 
 work.display();
 
-/* Encapsulate display within projects object
-   Display project information */
+education.display = function() {	
+
+	for (school in education.schools) {
+		$("#education").append(HTMLschoolStart);
+
+		var formattedName = HTMLschoolName.replace("%data%", education.schools[school].name);
+		$(".education-entry:last").append(formattedName);
+
+		var formattedDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
+		$(".education-entry:last").append(formattedDates);
+
+		var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].major);
+		$(".education-entry:last").append(formattedMajor);
+
+		var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
+		$(".education-entry:last").append(formattedLocation);
+
+	}
+}
+education.display();
+
 projects.display = function() {
 	for (project in projects.projects) {
 		$("#projects").append(HTMLprojectStart);
@@ -158,35 +160,6 @@ projects.display = function() {
 
 projects.display();
 
-// Click Tracking //
-$(document).click(function(loc) {
-  // your code goes here
-  var x = loc.pageX;
-  var y = loc.pageY;
-
-  logClicks(x,y);
-});
-
-
-
-/* Internationalize Feature
-   Capitalizes last name and first lettter of first name. */
-function inName(nameString) {
-	var splitName = nameString.split(" ");
-	console.log(splitName);
-	var firstName = splitName[0];
-	var lastName = splitName[1];
-
-	firstName = firstName.charAt(0).toUpperCase() + firstName.slice(1);
-	lastName = lastName.toUpperCase();
-
-	var newName = firstName + " " +lastName;
-	console.log(newName);
-	return newName;
-
-}
-$('#main').append(internationalizeButton);
-/* */
 $('#mapDiv').append(googleMap);
 
 
