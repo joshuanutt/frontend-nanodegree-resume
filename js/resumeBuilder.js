@@ -16,7 +16,7 @@ var bio = {
 		"location": "dallas"
 	},
 	"welcomeMessage": "Hello, my name is Josh and I love web development!",
-	"skills" : ["Awesomness", "Delivering Things", "Cryogenic Sleep", "Saving the Universe"],
+	"skills" : ["Javascript", "jQuery", "HTML", "CSS"],
 	"bioPic": "images/fry.jpg"
 }
 
@@ -54,12 +54,14 @@ var projects = {
 		{
 			"title": "Project One",
 			"dates": "December 2014",
-			"description": "Create webpage to sell product from a mock pdf page.  I was required to acheive <8% mismatch"
+			"description": "Create webpage to sell product from a mock pdf page.  I was required to acheive <8% mismatch.",
+			"images": ["images/sampleimage.jpg"]
 		},
 		{
 			"title": "Not a real Project",
 			"dates": "September 1900",
-			"description": "This is a filler entry"
+			"description": "This is a filler entry",
+			"images": ["images/sampleimage.jpg"]
 		}
 	]
 }
@@ -136,6 +138,9 @@ education.display = function() {
 }
 education.display();
 
+
+$('#mapDiv').append(googleMap);
+
 projects.display = function() {
 	for (project in projects.projects) {
 		$("#projects").append(HTMLprojectStart);
@@ -150,7 +155,7 @@ projects.display = function() {
 		$(".project-entry:last").append(formattedDescription);
 
 		if (projects.projects[project].images.length > 0) {
-			for (image in projects.project[project].images) {
+			for (image in projects.projects[project].images) {
 				var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
 				$(".project-entry:last").append(formattedImage);
 		}
@@ -159,7 +164,5 @@ projects.display = function() {
 }
 
 projects.display();
-
-$('#mapDiv').append(googleMap);
 
 
