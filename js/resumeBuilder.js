@@ -41,7 +41,7 @@ var work = {
 		{
 			"employer": "Telenetwork",
 			"title": "Tech Support Rep",
-			"location": "Work from home",
+			"location": "Arlington, TX",
 			"dates": "Jan 6th 2014 - Sept 2014",
 			"description": "Provided customer service and tech support over the phone for a major internet service provider.",
 			"url": "telenetwork.com"
@@ -55,13 +55,13 @@ var projects = {
 			"title": "Project One",
 			"dates": "December 2014",
 			"description": "Create webpage to sell product from a mock pdf page.  I was required to acheive <8% mismatch.",
-			"images": ["images/sampleimage.jpg"]
+			"images": ["images/doge-cookie.jpg"]
 		},
 		{
 			"title": "Not a real Project",
 			"dates": "September 1900",
 			"description": "This is a filler entry",
-			"images": ["images/sampleimage.jpg"]
+			"images": ["images/sleepy.jpg"]
 		}
 	]
 }
@@ -70,7 +70,7 @@ var education = {
 	"schools": [
 		{
 			"name": "Udacity",
-			"location": "Online",
+			"location": "Mansfield, TX",
 			"major": "Front-End Web Development",
 			"dates": "2014-2015",
 			"url": "udacity.com"
@@ -164,5 +164,11 @@ projects.display = function() {
 }
 
 projects.display();
+
+bio.display = function(){
+	for (data in contacts.bio) {
+		
+	}
+}
 
 
