@@ -1,0 +1,63 @@
+/* General Formatting */
+* {
+  padding:0;
+  margin:0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.clearfix {
+  overflow: auto;
+}
+/* Heading CSS */
+#header {
+	background-color:#3c9dd0;
+	color:#034569;
+}
+h3 {
+	color:#ff8b00;
+	font-style: italic;
+    font-size: 20px;
+    text-shadow: 1px 1px black;
+    text-align:center;
+}
+ul {
+	list-style-type:none;
+	text-shadow: 1px 1px black;
+	text-align:center;
+}
+li {
+	color:white;
+	font-weight:bold;
+	line-height:1.5em;
+	display:inline;
+	padding:0 5%;
+}
+img {
+	max-width: 100%;
+}
+#intro {
+	font-family:'Pacifico', sans-serif;
+	color:#ff8b00;
+	text-shadow: 1px 1px black;
+}
+
+.welcome-message {
+	font-size: 2em;
+	font-family:'Pacifico', sans-serif;
+}
+
+
+/* Map Stuff */
+#map {
+  display: block;
+  height: 100%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+#mapDiv {
+  height: 400px;
+  width: 100%;
+  padding-bottom: 5%;
+}
+

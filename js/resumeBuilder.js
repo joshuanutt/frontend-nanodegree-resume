@@ -1,9 +1,9 @@
-var formattedName = HTMLheaderName.replace("%data%", "Joshua Nutt");
+/*var formattedName = HTMLheaderName.replace("%data%", "Joshua Nutt");
 var formattedRole = HTMLheaderRole.replace("%data%", "Web Developer");
 
 
 $("#header").prepend(formattedRole);
-$("#header").prepend(formattedName);
+$("#header").prepend(formattedName);*/
 
 var bio = {
 	"name": "Joshua",
@@ -15,16 +15,16 @@ var bio = {
 		"twitter": "@me",
 		"location": "dallas"
 	},
-	"welcomeMessage": "Hello, my name is Josh and I love web development!",
-	"skills" : ["Javascript", "jQuery", "HTML", "CSS"],
+	"welcomeMessage": "<span id='intro'>Hello, my name is Josh!</span> While I study <span id='intro'>web development</span> at Udacity I'm focusing heavily on future proofing my websites through <span id='intro'>responsive design</span> and learning the <span id='intro'>best practices.</span>",
+	"skills" : ["Javascript", "jQuery", "HTML", "CSS", "Python"],
 	"bioPic": "images/fry.jpg"
 }
 
 var welcomeMsg = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
 $("#header").append(welcomeMsg);
 
-var mainPic = HTMLbioPic.replace("%data%", bio.bioPic);
-$("#header").append(mainPic);
+/*var mainPic = HTMLbioPic.replace("%data%", bio.bioPic);
+$("#header").append(mainPic);*/
 
 
 var work = {
@@ -165,10 +165,5 @@ projects.display = function() {
 
 projects.display();
 
-bio.display = function(){
-	for (data in contacts.bio) {
-		
-	}
-}
 
 
