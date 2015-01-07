@@ -49,6 +49,11 @@ img {
 	padding-bottom:30px;
 }
 
+/* Navigation */
+nav {
+	background-color:#3c9dd0;
+}
+
 /* Body Formatting */
 h2 {  /* This is for titles of sections */
 	color:#ff8b00;
