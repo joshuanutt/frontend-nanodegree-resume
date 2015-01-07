@@ -19,13 +19,11 @@ var bio = {
 	"skills" : ["Javascript", "jQuery", "HTML", "CSS"],
 	"bioPic": "images/fry.jpg"
 }
+var mainPic = HTMLbioPic.replace("%data%", bio.bioPic);
+$("#header").append(mainPic);
 
 var welcomeMsg = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
 $("#header").append(welcomeMsg);
-
-/*var mainPic = HTMLbioPic.replace("%data%", bio.bioPic);
-$("#header").append(mainPic);*/
-
 
 var work = {
 	"jobs": [ 
@@ -95,7 +93,6 @@ while (bio.skills.length > i) {
 	i = i + 1;
 
 }
-
 
 work.display = function() {	
 

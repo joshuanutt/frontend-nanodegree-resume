@@ -8,12 +8,13 @@ body {
 	background-color:#64aad0;
 }
 
-/* Heading CSS */
+/* CSS for Header */
 #header {
 	background-color:#3c9dd0;
 	color:#034569;
 	padding:.625em;
-	margin-bottom:15px;
+	margin-bottom:.938em;
+	padding-bottom:.938em;
 }
 h3{
 	color:#ff8b00;
@@ -49,6 +50,10 @@ img {
 	padding-bottom:30px;
 }
 
+#skillsH3 {
+	margin-top:.750em;
+}
+
 /* Navigation */
 nav {
 	background-color:#3c9dd0;
@@ -64,6 +69,13 @@ h2 {  /* This is for titles of sections */
 
 a {
 	text-decoration:none;
+}
+
+/* Main Image */
+#header img {
+	display:block;
+	max-width: 100%;
+	margin: 0 auto;
 }
 
 
