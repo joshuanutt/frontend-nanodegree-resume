@@ -4,16 +4,16 @@
   margin:0;
   font-family: 'Roboto', sans-serif;
 }
-
-.clearfix {
-  overflow: auto;
+body {
+	background-color:#64aad0;
 }
+
 /* Heading CSS */
 #header {
 	background-color:#3c9dd0;
 	color:#034569;
 }
-h3 {
+h3{
 	color:#ff8b00;
 	font-style: italic;
     font-size: 20px;
@@ -44,6 +44,18 @@ img {
 .welcome-message {
 	font-size: 2em;
 	font-family:'Pacifico', sans-serif;
+}
+
+/* Body Formatting */
+h2 {  /* This is for titles of sections */
+	color:#ff8b00;
+	font-family:'Pacifico', sans-serif;
+	text-shadow: 1px 1px black;
+	font-size:1.5em;
+}
+
+a {
+	text-decoration:none;
 }
 
 
