@@ -15,8 +15,8 @@ var bio = {
 		"twitter": "@me",
 		"location": "dallas"
 	},
-	"welcomeMessage": "<span id='intro'>Hello, my name is Josh!</span> While I study <span id='intro'>web development</span> at Udacity I'm focusing heavily on future proofing my websites through <span id='intro'>responsive design</span> and learning the <span id='intro'>best practices.</span>",
-	"skills" : ["Javascript", "jQuery", "HTML", "CSS", "Python"],
+	"welcomeMessage": "<span id='intro'>Hello, my name is Josh!</span> I'm currently studying <span id='intro'>web development</span> at Udacity. I'm also studying how to future proof my websites through <span id='intro'>responsive design.</span>",
+	"skills" : ["Javascript", "jQuery", "HTML", "CSS"],
 	"bioPic": "images/fry.jpg"
 }
 

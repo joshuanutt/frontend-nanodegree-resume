@@ -12,6 +12,7 @@ body {
 #header {
 	background-color:#3c9dd0;
 	color:#034569;
+	padding:.625em;
 }
 h3{
 	color:#ff8b00;
@@ -44,6 +45,7 @@ img {
 .welcome-message {
 	font-size: 2em;
 	font-family:'Pacifico', sans-serif;
+	padding-bottom:30px;
 }
 
 /* Body Formatting */
