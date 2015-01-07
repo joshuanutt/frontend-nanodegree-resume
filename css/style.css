@@ -213,3 +213,8 @@ span {
     display: block;
   }
 }
+@media only screen and (max-width: 667px) {
+  .project-entry img {
+    max-width: 100%;
+  }
+}
