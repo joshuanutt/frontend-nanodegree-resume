@@ -47,6 +47,7 @@ img {
 #skillsH3 {
 	margin-top:1em;
 	margin-bottom:.25em;
+	text-shadow: 1px 1px black;
 }
 
 /* Main message */
@@ -88,8 +89,9 @@ nav li {
 h2 {  /* This is for titles of sections */
 	color:#ff8b00;
 	font-family:'Pacifico', sans-serif;
-	text-shadow: 1px 1px #a65900;
+	/*text-shadow: 1px 1px #a65900;*/
 	font-size:1.75em;
+	text-shadow: 1px 1px black;
 }
 
 a {
