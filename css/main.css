@@ -99,11 +99,14 @@ a {
 }
 
 /* Formatting for entries like work experience or projects */
-#workExperience, #projects {
+#workExperience, #projects, #education, #mapdiv {
 	padding-left:1.5em;
 	margin-bottom:1em;
 }
-#workExperience h2, #projects h2 {
+#mapDiv h2 {
+	text-align:center;
+}
+#workExperience h2, #projects h2, #mapDiv h2, #education h2 {
 	margin-bottom:.25em;
 	border-bottom: 1px groove #ffbe73;
 }
