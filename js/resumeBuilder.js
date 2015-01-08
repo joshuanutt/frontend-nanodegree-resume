@@ -9,7 +9,8 @@ var bio = {
 		"location": "Mansfield, TX"
 	},
 	"welcomeMessage": "<span id='highlight'>Hello, my name is Josh!</span> I'm currently studying <span id='highlight'>web development</span> at Udacity. I absolutely love <span id='highlight'>responsive design,</span> and can't wait to become a web developer.",
-	"workMessage": "Here you will find some of my <span id='highlight'>projects</span> and <span id='highlight'>work experience</span>",
+	"workMessage": "Here you will find some of my <span id='highlight'>projects</span> and <span id='highlight'>work experience.</span>",
+	"personalMessage": "I've spent most of my life in the DFW metroplex, but <span id='highlight'>I'm willing to relocate</span> almost anywhere.",
 	"skills" : ["Javascript", "jQuery", "HTML", "CSS"],
 	"bioPic": "images/fry.jpg"
 }
@@ -30,6 +31,9 @@ $("#header").append(welcomeMsg);
 
 var workMsg = HTMLworkMsg.replace("%data%", bio.workMessage);
 $("#work-header").append(workMsg);
+
+var personalMsg = HTMLpersonalMsg.replace("%data%", bio.personalMessage);
+$("#personal-header").append(personalMsg);
 
 var work = {
 	"jobs": [ 

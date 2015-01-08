@@ -10,7 +10,7 @@ body {
 }
 
 /* CSS for Header */
-#header, #work-header{
+#header, #work-header, #personal-header{
 	background-color:#3c9dd0;
 	color:#034769;
 	padding:.625em;
@@ -58,7 +58,7 @@ img {
 	text-shadow: 1px 1px black;/*#a65900;*/
 }
 
-.welcome-message, .work-message {
+.welcome-message, .work-message, .personal-message {
 	color:#034769;
 	font-size: 2em;
 	font-family:'Pacifico', sans-serif;
@@ -74,7 +74,8 @@ nav {
 
 nav a {
 	color:#ff8b00;
-	font-size:1.25em;
+	font-size:1.75em;
+	font-family:'Pacifico', sans-serif;
 }
 
 nav a:hover {
