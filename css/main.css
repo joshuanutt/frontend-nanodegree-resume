@@ -42,6 +42,7 @@ ul {
 
 img {
 	max-width: 100%;
+	padding: ;
 }
 
 #skillsH3 {
@@ -89,7 +90,6 @@ nav li {
 h2 {  /* This is for titles of sections */
 	color:#ff8b00;
 	font-family:'Pacifico', sans-serif;
-	/*text-shadow: 1px 1px #a65900;*/
 	font-size:1.75em;
 	text-shadow: 1px 1px black;
 }
@@ -110,6 +110,7 @@ a {
 
 #workExperience img, #projects img{
 	margin:1.25em 0;
+	max-width: 95%;
 }
 .date-text {
 	font-style:italic;
