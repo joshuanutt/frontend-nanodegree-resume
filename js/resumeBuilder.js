@@ -1,29 +1,35 @@
-/*var formattedName = HTMLheaderName.replace("%data%", "Joshua Nutt");
-var formattedRole = HTMLheaderRole.replace("%data%", "Web Developer");
-
-
-$("#header").prepend(formattedRole);
-$("#header").prepend(formattedName);*/
 
 var bio = {
 	"name": "Joshua",
 	"role": "Web Developer",
 	"contacts": {
-		"mobile": "555-555-5555",
-		"email" : "me@example.com",
-		"github": "me",
-		"twitter": "@me",
-		"location": "dallas"
+		"mobile": "(682) 425 5555",
+		"email" : "joshuadnutt@gmail.com",
+		"github": "www.github.com/joshuanutt",
+		"location": "Mansfield, TX"
 	},
-	"welcomeMessage": "<span id='intro'>Hello, my name is Josh!</span> I'm currently studying <span id='intro'>web development</span> at Udacity. I absolutely love <span id='intro'>responsive design,</span> and can't wait to make websites professionally.",
+	"welcomeMessage": "<span id='highlight'>Hello, my name is Josh!</span> I'm currently studying <span id='highlight'>web development</span> at Udacity. I absolutely love <span id='highlight'>responsive design,</span> and can't wait to become a web developer.",
+	"workMessage": "Here you will find some of my <span id='highlight'>projects</span> and <span id='highlight'>work experience</span>",
 	"skills" : ["Javascript", "jQuery", "HTML", "CSS"],
 	"bioPic": "images/fry.jpg"
 }
+
+displayContact = function(){
+	for (contact in bio.contacts) {
+		var contact = HTMLcontactGeneric.replace("%data%", bio.contacts[contact])
+		$("#letsConnect:last").append(contact);
+	}
+}
+displayContact();
+
 var mainPic = HTMLbioPic.replace("%data%", bio.bioPic);
 $("#header").append(mainPic);
 
 var welcomeMsg = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
 $("#header").append(welcomeMsg);
+
+var workMsg = HTMLworkMsg.replace("%data%", bio.workMessage);
+$("#work-header").append(workMsg);
 
 var work = {
 	"jobs": [ 
@@ -43,6 +49,22 @@ var work = {
 			"dates": "Jan 6th 2014 - Sept 2014",
 			"description": "Provided customer service and tech support over the phone for a major internet service provider.",
 			"url": "telenetwork.com"
+		},
+
+		{
+			"employer": "Walmart",
+			"title": "Receiving Associate",
+			"location": "Arlington, TX",
+			"dates": "May 2013 - Aug 2013",
+			"description": "Provided customer service, unloaded trucks, and maintained good inventory practices. Left to go back to TCC.",
+		},
+
+		{
+			"employer": "Lenders Recourse Inc",
+			"title": "Spotter car driver",
+			"location": "Burleson, TX",
+			"dates": "September 2012 - Jan 2013",
+			"description": "I was responsible for driving a company car all over the DFW metroplex while searching for cars to repossess. Left because the company closed.",
 		}
 	]
 }

@@ -15,44 +15,26 @@
   	</head>
 
 	<body>
-      <nav>
-         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="workExperience.html">Experience</a></li>
-          <li><a href="aboutMe.html">Personal</a></li>
-         </ul>
-      </nav>
+	  <nav>
+	      <ul>
+	       <li><a href="index.html">Home</a></li>
+	       <li><a href="workExperience.html">Experience</a></li>
+	       <li><a href="aboutMe.html">Personal</a></li>
+	      </ul>
+	  </nav>
+	  <div id="work-header">
+	  </div>
       <div id="workExperience" class='gray'>
         <h2>Work Experience</h2>
       </div>
       <div id="projects">
         <h2>Projects</h2>
       </div>
-
+      <div id="letsConnect" class='dark-gray'>
+        <h2 class='center-text'>Contact Me!</h2>
+          <ul id="footerContacts" class="flex-box"></ul>
+      </div>    
 	  <script src="js/resumeBuilder.js"></script>
-   	  <script type="text/javascript">
 
-	      if(document.getElementsByClassName('flex-item').length === 0) {
-	        document.getElementById('topContacts').style.backgroundColor = black;
-	      }
-	      if(document.getElementsByTagName('h1').length === 0) {
-	        document.getElementById('header').style.backgroundColor = black;
-	      }
-	      if(document.getElementsByClassName('work-entry').length === 0) {
-	        document.getElementById('workExperience').style.backgroundColor = black;
-	      }
-	      if(document.getElementsByClassName('project-entry').length === 0) {
-	        document.getElementById('projects').style.backgroundColor = black;
-	      }
-	      if(document.getElementsByClassName('education-entry').length === 0) {
-	        document.getElementById('education').style.backgroundColor = black;
-	      }
-	      if(document.getElementsByClassName('flex-item').length === 0) {
-	        document.getElementById('letsConnect').style.backgroundColor = black;
-	      }
-	      if(document.getElementById('map') === null) {
-	        document.getElementById('mapDiv').style.display = 'none';
-	      }
-	    </script>
 	</body>
 </html>
