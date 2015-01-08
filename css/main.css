@@ -61,8 +61,8 @@ img {
 	font-size: 2em;
 	font-family:'Pacifico', sans-serif;
 	text-shadow: 1px 1px #63add0;
+	line-height:1.25em;
 }
-
 
 /* Navigation */
 nav {
@@ -163,10 +163,9 @@ a {
 @media only screen and (max-width: 527px){
 	.welcome-message {
 		font-size:1.75em;
-		line-height:1.25em;
 	}
 }
-@media only screen and (max-width:441px){
+@media only screen and (max-width:452px){
 	nav li{
 		display:inherit;
 	}
