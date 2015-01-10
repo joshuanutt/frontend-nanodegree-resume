@@ -402,6 +402,6 @@ body
 
 .trigger-button:active
 {
-    border-top: 5px solid white;
+    border-top: 5px solid #64aad0;
     box-shadow: none;
 }
