@@ -8,7 +8,7 @@ var bio = {
 		"github": "www.github.com/joshuanutt",
 		"location": "Mansfield, TX"
 	},
-	"welcomeMessage": "<span id='highlight'>Hello, my name is Josh!</span> I'm currently studying <span id='highlight'>web development</span> at Udacity. I absolutely love <span id='highlight'>responsive design,</span> and can't wait to become a web developer.",
+	"welcomeMessage": "<span id='highlight'>Hello, my name is Josh!</span> I'm currently studying <span id='highlight'>web development</span> at Udacity. I absolutely love <span id='highlight'>responsive design,</span> and can't wait to become a professional web developer.",
 	"workMessage": "Here you will find some of my <span id='highlight'>projects</span> and <span id='highlight'>work experience.</span>",
 	"personalMessage": "I've spent most of my life in the DFW metroplex, but <span id='highlight'>I'm willing to relocate</span> almost anywhere.",
 	"skills" : ["Javascript", "jQuery", "HTML", "CSS"],
@@ -166,6 +166,29 @@ $('#mapDiv').append(googleMap);
 
 projects.display = function() {
 	for (project in projects.projects) {
+		var formattedLink = MODALlink.replace("%data%", projects.projects[project].title);
+		$("#projects").append(formattedLink);
+		$("#projects").append(MODALcreate);
+		$(".modalDialog").append(MODALexit);
+		if (projects.projects[project].images.length > 0) {
+			for (image in projects.projects[project].images) {
+				var formattedImage = MODALimage.replace("%data%", projects.projects[project].images[image]);
+				$(".modalDialog:last").append(formattedImage);
+			}
+		}
+
+		formattedTitle = MODALtitle.replace("%data%", projects.projects[project].title);
+		$(".modalDialog:last").append(formattedTitle);
+
+		var formattedData = MODALdetails.replace("%data%", projects.projects[project].description);
+		$(".modalDialog:last").append(formattedData);
+	}
+}
+
+projects.display();
+
+
+	/*for (project in projects.projects) {
 		$("#projects").append(HTMLprojectStart);
 
 		var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
@@ -183,10 +206,6 @@ projects.display = function() {
 				$(".project-entry:last").append(formattedImage);
 		}
 	  }
-	}
-}
-
-projects.display();
-
+	}*/
 
 
