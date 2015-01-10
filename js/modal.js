@@ -144,6 +144,7 @@
 
 }());
 
+// Added this 
 var myContent = document.getElementById('content');
 
 var myModal = new Modal({

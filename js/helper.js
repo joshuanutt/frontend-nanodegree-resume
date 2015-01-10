@@ -29,12 +29,9 @@ var HTMLworkMsg = '<span class="work-message">%data%</span>'; //added this
 var HTMLpersonalMsg = '<span class="personal-message">%data%</span>'; //added this too
 
 /* Modal Helper added this to make modals */
-var MODALlink = '<a href="#openModal">%data%</a>';
-var MODALcreate = '<div id="openModal" class="modalDialog">%data%</div>';
-var MODALtitle = '<h2>%data%</h2>';
-var MODALdetails = '<p><br>%data%</p>';
-var MODALimage = '<img src="%data%" class="projectPic">';
-var MODALexit = '<a href="#close" title="Close" class="close">X</a>';
+var modalButton = '<button id="trigger" class="trigger-button" type="button">%data%</button>';
+var modalDiv = '<div id="content"><h1 id="modal-title>%data%</h1><div>';
+var modalTitle = '<h1 id="modal-title>%data%</h1>';
 
 var HTMLskillsStart = '<h3 id="skillsH3">Skills at a Glance</h3><ul id="skills" class="flex-box"></ul>';
 var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';

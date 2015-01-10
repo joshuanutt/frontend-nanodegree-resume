@@ -79,13 +79,15 @@ var projects = {
 			"title": "Project One",
 			"dates": "December 2014",
 			"description": "Create webpage to sell product from a mock pdf page.  I was required to acheive <8% mismatch.",
-			"images": ["images/doge-cookie.jpg"]
+			"images": ["images/doge-cookie.jpg"],
+			"identifer": "projectOne"
 		},
 		{
 			"title": "Not a real Project",
 			"dates": "September 1900",
 			"description": "This is a filler entry",
-			"images": ["images/sleepy.jpg"]
+			"images": ["images/sleepy.jpg"],
+			"identifer": "notReal"
 		}
 	]
 }
@@ -165,47 +167,18 @@ education.display();
 $('#mapDiv').append(googleMap);
 
 projects.display = function() {
+	/* TODO: create modal and fill it 
+	1) var newModal = new Modal ({ });
+	2) add content to model using JS
+	3) modify dom to add modal and modal button*/
 	for (project in projects.projects) {
-		var formattedLink = MODALlink.replace("%data%", projects.projects[project].title);
-		$("#projects").append(formattedLink);
-		$("#projects").append(MODALcreate);
-		$(".modalDialog").append(MODALexit);
-		if (projects.projects[project].images.length > 0) {
-			for (image in projects.projects[project].images) {
-				var formattedImage = MODALimage.replace("%data%", projects.projects[project].images[image]);
-				$(".modalDialog:last").append(formattedImage);
-			}
-		}
-
-		formattedTitle = MODALtitle.replace("%data%", projects.projects[project].title);
-		$(".modalDialog:last").append(formattedTitle);
-
-		var formattedData = MODALdetails.replace("%data%", projects.projects[project].description);
-		$(".modalDialog:last").append(formattedData);
+		var formattedButton = modalButton.replace("%data%", projects.projects[project].title);
+		$("#projects").append(formattedButton);
 	}
+	
 }
 
 projects.display();
 
-
-	/*for (project in projects.projects) {
-		$("#projects").append(HTMLprojectStart);
-
-		var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
-		$(".project-entry:last").append(formattedTitle);
-
-		var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
-		$(".project-entry:last").append(formattedDates);
-
-		var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
-		$(".project-entry:last").append(formattedDescription);
-
-		if (projects.projects[project].images.length > 0) {
-			for (image in projects.projects[project].images) {
-				var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
-				$(".project-entry:last").append(formattedImage);
-		}
-	  }
-	}*/
 
 
