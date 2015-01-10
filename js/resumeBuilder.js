@@ -80,14 +80,28 @@ var projects = {
 			"dates": "December 2014",
 			"description": "Create webpage to sell product from a mock pdf page.  I was required to acheive <8% mismatch.",
 			"images": ["images/doge-cookie.jpg"],
-			"identifer": "projectOne"
+			"id": "projectOne"
 		},
 		{
 			"title": "Not a real Project",
 			"dates": "September 1900",
 			"description": "This is a filler entry",
 			"images": ["images/sleepy.jpg"],
-			"identifer": "notReal"
+			"id": "notReal"
+		},
+		{
+			"title": "Meme Generator",
+			"dates": "November 2013",
+			"description": "I can't find the source code for this project, but when I do this will be a real entry",
+			"images": ["images/sleepy.jpg"],
+			"id": "memeGenerator"
+		},
+		{
+			"title": "Another Filler",
+			"dates": "December 1900",
+			"description": "This is a filler entry",
+			"images": ["images/sleepy.jpg"],
+			"id": "alsoNotReal"
 		}
 	]
 }
@@ -170,10 +184,21 @@ projects.display = function() {
 	/* TODO: create modal and fill it 
 	1) var newModal = new Modal ({ });
 	2) add content to model using JS
-	3) modify dom to add modal and modal button*/
+	3) modify dom to add modal and modal button | DONE ADDED BUTTON */
 	for (project in projects.projects) {
+		// ADDING A BUTTON WORKS
+		// TODO:  ADD ID FOR BUTTON -- completed
+		var formattedID = projects.projects[project].id;
+
 		var formattedButton = modalButton.replace("%data%", projects.projects[project].title);
 		$("#projects").append(formattedButton);
+
+		// Create the div that contains the modal information
+		var formattedDiv = modalDiv.replace("%data%", projects.projects[project].title); 
+		$(".trigger-button:last").append(formattedDiv);
+		// Append content to div
+		var myContent = projects.projects[project].description;
+		$(".modal-content:last").append(myContent);
 	}
 	
 }

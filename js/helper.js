@@ -30,8 +30,9 @@ var HTMLpersonalMsg = '<span class="personal-message">%data%</span>'; //added th
 
 /* Modal Helper added this to make modals */
 var modalButton = '<button id="trigger" class="trigger-button" type="button">%data%</button>';
-var modalDiv = '<div id="content"><h1 id="modal-title>%data%</h1><div>';
+var modalDiv = '<div id="content" class="modal-content"><h1 id="modal-title>%data%</h1><div>';
 var modalTitle = '<h1 id="modal-title>%data%</h1>';
+
 
 var HTMLskillsStart = '<h3 id="skillsH3">Skills at a Glance</h3><ul id="skills" class="flex-box"></ul>';
 var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
@@ -69,12 +70,12 @@ var googleMap = '<div id="map"></div>';
 /*
 The International Name challenge in Lesson 2 where you'll create a function that will need this helper code to run. Don't delete! It hooks up your code to the button you'll be appending.
 */
-$(document).ready(function() {
+/*$(document).ready(function() {
   $('button').click(function() {
-    var iName = inName(name) || function(){};
+    var inName = inName(name) || function(){};
     $('#name').html(iName);  
   });
-});
+});*/
 
 /*
 The next few lines about clicks are for the Collecting Click Locations quiz in Lesson 2.
