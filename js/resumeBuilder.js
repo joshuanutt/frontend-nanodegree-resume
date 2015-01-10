@@ -182,15 +182,11 @@ $('#mapDiv').append(googleMap);
 
 projects.display = function() {
 	/* TODO: create modal and fill it 
-	1) var newModal = new Modal ({ });
-	2) add content to model using JS
-	3) modify dom to add modal and modal button | DONE ADDED BUTTON */
+	1) Get modal to work on all buttons */
 	for (project in projects.projects) {
-		// ADDING A BUTTON WORKS
-		// TODO:  ADD ID FOR BUTTON -- completed
-		var formattedID = projects.projects[project].id;
-
-		var formattedButton = modalButton.replace("%data%", projects.projects[project].title);
+		// Add button
+		var getID = String(projects.projects[project].id);
+		var formattedButton = modalButton.replace("%data%", projects.projects[project].title).replace("%content%", projects.projects[project].id);
 		$("#projects").append(formattedButton);
 
 		// Create the div that contains the modal information
@@ -199,6 +195,13 @@ projects.display = function() {
 		// Append content to div
 		var myContent = projects.projects[project].description;
 		$(".modal-content:last").append(myContent);
+
+		var triggerButton = document.getElementById(getID);
+
+		triggerButton.addEventListener('click', function() {
+		      myModal.open();
+		});
+		
 	}
 	
 }

@@ -29,7 +29,7 @@ var HTMLworkMsg = '<span class="work-message">%data%</span>'; //added this
 var HTMLpersonalMsg = '<span class="personal-message">%data%</span>'; //added this too
 
 /* Modal Helper added this to make modals */
-var modalButton = '<button id="trigger" class="trigger-button" type="button">%data%</button>';
+var modalButton = '<button id="%content%" class="trigger-button" type="button">%data%</button>';
 var modalDiv = '<div id="content" class="modal-content"><h1 id="modal-title>%data%</h1><div>';
 var modalTitle = '<h1 id="modal-title>%data%</h1>';
 
